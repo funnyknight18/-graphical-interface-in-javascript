@@ -10,12 +10,43 @@ const  $inputEstate = document.querySelector('[data-js="ddd_state"]');
 
 
 
-$button.addEventListener( 'click' , submitButton , false );
+$button.addEventListener( 'click' , Button_Of_Send , false );
 $button_contact.addEventListener('click' , sendNumberContact, false );
 
 
+
+function aceptUser() { 
+   window.alert('Bem Vindo!');
+}
+
+aceptUser(); 
+
+
+function isSubmit() {
+  let email = $email.value; 
+  let password = $password.value; 
+  let contatc = $contact.value; 
+
+ if(  email === '' || password === '' ||  contatc === ''){
+   window.alert('Preenchar todas as informaçoes'); }
+ else{ window.alert(`Seu dados... Senha: (${$password.value}) email: ${$email.value} contact ${ $contact.value}`);
+ }     
+}
+
+
+function clearInputs () { 
+  $email.value = '';  
+  $password.value = ''; 
+  $contact.value = ''; 
+}
+
+function  Button_Of_Send () { 
+  isSubmit(); // testar se esta tudo preenchido 
+  clearInputs(); // limpar logo apos o inputs 
+}
+
 function sendNumberContact() { 
-  let state = $inputEstate.value ;  
+  let state = $inputEstate.value ; 
   let DDD ;   
  switch (state) {
   case 'AM':
@@ -32,26 +63,28 @@ function sendNumberContact() {
     window.alert('Nao Encotramos Seu DDD'); 
     break;
  }
- $contact.value =  DDD + $contact.value;  
+ $contact.value =  DDD + ' ' +  $contact.value;  
   
-  DDD  ===  '(92)'? window.alert('entao voce é um manaurara... :) '): ''; 
+ if( DDD === '(92)')
+    window.alert('entao voce é um manaurara... :)');  
+
+    isnumberTrue();  
 }   
+
+function isnumberTrue() { 
+  var contato =  $contact.value; 
+
+  if(contato.match(/\d+/g)){ 
+    console.log('erro');
+  } else { 
+    console.log('great test'); 
+  }   
+}
+
 
 function submitButton () { 
   isSubmit(); 
   clearInputs();
-}
-
-
-function isSubmit() {
-  $email.value === '' || $password.value === '' ||  $contact === '' ?  window.alert('Preenchar todas as informaçoes') : 
-  window.alert(`Seu dados... Senha: (${$password.value}) email: ${$email.value} contact ${ $contact.value}`);
-}
-
-
-function clearInputs () { 
-  $email.value = '';  
-  $password.value = ''; 
 }
 
 
