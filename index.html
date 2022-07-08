@@ -8,19 +8,26 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="center" data-js="center">
-        <h1> Email</h1>
-        <input type="email" placeholder="coloque seu Email" data-js="email">
-        <h1>Senha</h1>
-        <input type="password" data-js="senha" placeholder="coloque sua senha">
-        <button data-js="button-logIn">log in</button>
+    <div class="center"  data-js="center">
+        <header data-js="header-js">
+            <h1>Cadastro de Login</h1>
+            <h2> Email</h2>
+            <input type="email" placeholder="coloque seu Email" data-js="email">
+            <h2>Senha</h2>
+            <input type="password" data-js="senha" placeholder="coloque sua senha">
+            <button data-js="button-logIn">log in</button>
+        </header> 
     </div>
     
-    <div>
-        <h1>numero de contato</h1>
+    <div class="contact" data-js="contact-center">
+       <header>
+        <h1> Cadastro de contato</h1>
+        <h2>numero de contato</h2>
         <input type="text" placeholder="Seu Estado" data-js="ddd_state">
         <input type="text" placeholder="seu numero de telefone" data-js="contact"> 
          <button  data-js="button-contact" > enviar seu number</button>
+         <button data-js="button-finsh">finalizar</button>
+       </header>
     </div>
 
     <script src="script.js"></script>
