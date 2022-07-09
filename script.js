@@ -101,21 +101,36 @@ function clickNumber() {
  function twoModule() { 
    var $divCenter = document.querySelector('[data-js="center"]'); 
    var $divContact = document.querySelector('[data-js="contact-center"]');  
-    $divCenter.innerHTML = '<header data-js="header-js"><h1>Formulario de Banco de dados</h1><h2>cidade</h2><input type="email" placeholder="cidade" data-js="email"> <h2>Bairro</h2><input type="password" data-js="senha" placeholder="coloque bairro"><button data-js="button-logIn">Cadastrar</button></header> ';  
-
-    $divContact.innerHTML = '';  
+   
+    $divCenter.innerHTML = '<header data-js="header-js"><h1>Formulario de Banco de dados</h1> <h2>País</h2><input type="text" placeholder="Qual seu país" data-js="input_coutry"><h2>Estado</h2><input type="text" data-js="input_state" placeholder="Qual seu estado"><h2>Cidade</h2><input type="text" data-js="input_city" placeholder="Qual sua cidade"></header>';
+    $divContact.innerHTML = '<header data-js="header-js"><h2>Bairro</h2><input type="text" placeholder="Qual seu Bairro" data-js="input_Bairro"><h2>CEP</h2><input type="text" data-js="input_cep" placeholder="Qual o numero do CEP"><h2>Numero da casa</h2><input type="text" data-js="input_number_home" placeholder="Qual o numero da casa"><button data-js="button-logIn">Cadastrar</button></header>'; 
 }
-
-
 })( document , window);
 
-{/* <header data-js="header-js"></header> 
 
-<h1>Cadastro de Login</h1>
-<h2> Email</h2>
-<input type="email" placeholder="coloque seu Email" data-js="email">
-<h2>Senha</h2>
-<input type="password" data-js="senha" placeholder="coloque sua senha">
-<button data-js="button-logIn">log in</button> */}
+
+
+
+
+div_contantc = { /*
+ 
+<header data-js="header-js">
+<h2>Bairro</h2><input type="text" placeholder="Qual seu Bairro" data-js="input_Bairro">
+<h2>CEP</h2><input type="text" data-js="input_cep" placeholder="Qual o numero do CEP">
+<h2>Numero da casa</h2><input type="text" data-js="input_number_home" placeholder="Qual o numero da casa">
+</header>';
+ 
+*/ }
+
+
+
+
+ div_center = {/*     <h1 data-js="h1-header">Cadastro de Login</h1>
+            <h2 data-js="h2-email"> Email</h2>
+            <input type="email" placeholder="coloque seu Email" data-js="email">
+            <h2 data-js="h2-password">Senha</h2>
+            <input type="password" data-js="senha" placeholder="coloque sua senha">
+            <button data-js="button-logIn">log in</button>*/ 
+          }
 
 
