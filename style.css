@@ -1,36 +1,39 @@
-
 *{
     background-color: rgb(122, 205, 111);
 }
 
+body {
+  font-family: sans-serif;
+}
+  
 
-    body {
-      font-family: sans-serif;
-    }
-
-    header {
+header {
       text-align: center;
-    }
+}
 
-    form, table {
-      float: left;
-      width: 50%;
-    }
-
-    input {
+input {
       padding: 5px;
       width: 300px;
-    }
+}
 
-    button {
+button {
       background: green;
       border: 0;
       color: #fff;
       padding: 10px 20px;
-    }
+}
 
-    button:hover,
-    button:focus {
+button:hover,
+button:focus {
       background: darkgreen;
       cursor: pointer;
-    }
+}
+
+header .button_new { 
+   background-color: red;
+   border: 0;
+   color: #fff;
+   padding: 10px 20px;
+}
+
+  
